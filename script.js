@@ -5,6 +5,10 @@ if (window.innerWidth < 801) {
     mobileInterdit.style.display = "block";
 }
 
+if (window.innerWidth >= 801) {
+   
+
+
 
 
 // Division Riedeaux début
@@ -203,3 +207,5 @@ window.addEventListener('scroll', function(){
             },23000);                
     } 
 })
+
+}
