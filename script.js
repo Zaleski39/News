@@ -1,3 +1,11 @@
+var largeurFenetre = window.innerWidth;
+
+if (window.innerWidth < 801) {
+    var mobileInterdit = document.getElementById('mobileInterdit');
+    mobileInterdit.style.display = "block";
+}
+
+
 
 // Division Riedeaux début
     let acceuilVideoDebut = document.getElementById('acceuilVideo1');
