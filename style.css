@@ -34,21 +34,24 @@ body{
 .mobileInterdit{
     margin : 0;
     position: fixed;
-    z-index: 99999;
-    
+    z-index: 99999;    
     background-color: black;
     height: 100%;
     width: 100%;
     text-align: center;  
     vertical-align: middle  
 }
-
 .titreMobileInterdit{
     vertical-align: middle;
     color: white;
-    margin-top: 50%;
-
+    margin-top: 100px;
 }
+
+.photoMobileInterdit{
+    margin-top: 30%;
+    width: 100%;
+}
+
 
 
 /* Rideaux Début */
