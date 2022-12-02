@@ -44,11 +44,11 @@ body{
 .titreMobileInterdit{
     vertical-align: middle;
     color: white;
-    margin-top: 100px;
+    /* margin-top: 40px; */
 }
 
 .photoMobileInterdit{
-    margin-top: 30%;
+    margin-top: 20%;
     width: 100%;
 }
 
