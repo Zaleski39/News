@@ -1,0 +1,633 @@
+@font-face {
+    font-family: 'MyWebFont1';
+    src: url('assets/font/a_song_for_jennifer/a\ song\ for\ jennifer.ttf'); 
+    src: url('assets/font/a_song_for_jennifer/A\ Song\ For\ Jennifer\ BOLD.ttf') format('ttf'),
+         url('assets/font/a_song_for_jennifer/A\ Song\ For\ Jennifer\ BOLD\ Italic.ttf') format('ttf'),
+         url('assets/font/a_song_for_jennifer/A\ Song\ For\ Jennifer\ Italic.ttf')  format('ttf'), 
+}
+@font-face {
+    font-family: 'MyWebFont2';
+    src: url('assets/font/morgan-chalk-font/MorganChalk-L3aJy.ttf'); 
+}
+@font-face {
+    font-family: 'MyWebFont3';
+    src: url('assets/font/tafelschrift.regular.ttf'); 
+}
+@font-face {
+    font-family: 'MyWebFont4';
+    src: url('assets/font/Robgraves-lKYV.ttf'); 
+}
+
+
+body{
+    background-image: url(assets/img/mariage3.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+/* Rideaux Début */
+    .rideauxDebut{
+        height: 80vh;    
+    } 
+    .acceuilVideo10{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border : none;
+    }
+    section .acceuilVideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+    /* Découpage Rideaux Début */
+    section .acceuilVideo#acceuilVideo1{
+        clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    }
+    section .acceuilVideo#acceuilVideo2{
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    
+    }
+    section .acceuilVideo video{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+
+/* Scrool Down */
+.demo{
+    color : rgba(255, 255, 255, 0.637);  
+    display: none;             
+}    
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+    }
+#Scroll a {
+    padding-top: 60px;
+    }
+#Scroll a span {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid rgba(255, 255, 255, 0.466);
+    border-radius: 50px;
+    box-sizing: border-box;
+    z-index: 100;
+    }
+#Scroll a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: sdb10 2s infinite;
+    animation: sdb10 2s infinite;
+    box-sizing: border-box;
+}
+@-webkit-keyframes sdb10 {
+        0% {
+        -webkit-transform: translate(0, 0);
+        opacity: 0;
+        }
+        40% {
+        opacity: 0.8;
+        }
+        80% {
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+        }
+        100% {
+        opacity: 0;
+        }
+    }
+
+@keyframes sdb10 {
+        0% {
+        transform: translate(0, 0);
+        opacity: 0;
+        }
+        40% {
+        opacity: 0.6;
+        }
+        80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+        }
+        100% {
+        opacity: 0;
+        }
+    }
+
+
+
+/* -----------Apparition texte Accueil------------------------------------------------ */
+    .accueil1{
+        /* visibility: visible; */
+        display: block;
+        width: 100%;
+        position: absolute;
+        color: white;
+        margin-top : -400px;
+        z-index: 500;
+        text-align: center;
+        opacity : 0;
+        font-size: 150px;
+        /* transition: opacity 5s, visibility 5s; */
+        font-family: 'Qwitcher Grypen';
+        letter-spacing: 1px;
+
+
+    }
+    .vignetsApparition {    
+        opacity: 1;
+        transition: opacity 7s;
+    }
+    .vignetsDisparition {    
+        opacity: 0;
+        transition: opacity 3s;
+    }
+    @media screen and (max-width: 700px) {
+        .accueil1 {
+            font-size: 100px;
+            margin:auto;
+            margin-top : -60%;
+        }
+    }
+    .accueil2{
+        display: none;
+        width: 100%;
+        position: absolute;
+        color: white;
+        margin-top : -400px;
+        z-index: 500;
+        text-align: center;
+        opacity : 1;
+        font-size: 100px;
+        font-family: 'Qwitcher Grypen';
+    }
+    @media screen and (max-width: 700px) {
+        .accueil2 {
+            font-size: 100px;
+            margin:auto;
+            margin-top : -60%;
+        }
+    }
+
+/* ----------------------------------------------------------- */
+.pageVide{
+    /* position: relative; */
+    height: 60vh;
+}
+/* ----------------------------------------------------------- */
+
+.annonce{
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    text-align: center;
+    margin-top: 600px;
+
+}
+
+.annonce_parchemin{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.annonce_photo_parchemein{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -10;
+    opacity: 0.8;
+}
+    @media screen and (max-width: 801px) {
+        .annonce_photo_parchemein{
+            transform: rotate(90deg) ;
+            top: 0;
+            left: 0;
+            height: 75%;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .annonce_photo_parchemein{
+            height: 50%;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .annonce_photo_parchemein{
+            height: 50%;
+            width: 140%;
+            margin-left: -22%;
+        }
+    }
+
+.annonce_block{
+    position: relative;
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    top : 0;
+    font-family: 'Qwitcher Grypen';
+    padding-top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.annonce_titre{
+    font-size: 80px;
+    margin-top: 2%;
+}
+    @media screen and (max-width: 1366px) {
+        .annonce_titre{
+            font-size: 80px;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .annonce_titre{
+            font-size: 70px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .annonce_titre{
+            font-size: 60px;
+        }
+    }
+    @media screen and (max-width: 801px) {
+        .annonce_titre{
+            font-size: 45px;
+            margin-top: 10%;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .annonce_titre{
+            font-size: 35px;
+            margin-top: -5%;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .annonce_titre{
+            font-size: 25px;
+            margin-top: -20%;
+        }
+    }
+
+.annonce_block_description{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+    @media screen and (max-width: 801px) {
+        .annonce_block_description{
+            justify-content: normal;
+            margin-top: 10%;
+        }
+    }
+
+.annonce_texte{
+    font-size: 50px;
+}
+    @media screen and (max-width: 1366px) {
+        .annonce_texte{
+            font-size: 50px;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .annonce_texte{
+            font-size: 45px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .annonce_texte{
+            font-size: 35px;
+        }
+    }
+    @media screen and (max-width: 801px) {
+        .annonce_texte{
+            font-size: 30px;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .annonce_texte{
+            font-size: 20px;
+        }
+    }
+
+.annonce_texte_date{
+    font-size: 70px;
+}
+    @media screen and (max-width: 600px) {
+        .annonce_texte_date{
+            font-size: 50px;
+        }
+    }
+
+.annonce_texte_description{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+    @media screen and (max-width: 1366px) {
+        .annonce_texte_description{
+            font-size: 40px;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .annonce_texte_description{
+            font-size: 35px;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        .annonce_texte_description{
+            font-size: 30px;
+        }
+    }
+    @media screen and (max-width: 801px) {
+        .annonce_texte_description{
+            font-size: 25px;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .annonce_texte_description{
+            font-size: 20px;
+        }
+    }
+
+/* ----------------------------------------------------------- */
+.pageVide2{
+    height: 60vh;
+}
+/* ----------------------------------------------------------- */
+
+/* ------------------------------ PAGE PROGRAMME -------------------------------- */
+
+
+.programme{
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    text-align: center;
+    margin-top: 700px;
+}
+.programme_block{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around
+}
+.programme_block_ardoise{
+    background-image: url("assets/img/ardoise.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    min-width: 350px;
+    max-width: 450px;
+    height: 100%;
+    font-family: 'MyWebFont4';
+    color: white;
+    border-radius: 50px;
+}
+.programme_block_ardoise_photo{ 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-evenly
+}
+.programme_titre{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+.programme_block_photo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: -3%;
+    width: 50%;
+    height: 100%;
+}
+.programme_block_photo_enfants{
+    position: relative;
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+
+}
+
+.programme_block_photo_parents{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.photos{
+    opacity: 0.7;
+}
+
+.photoEnfants{
+    width: 80%;
+}
+
+.photoParent{
+    width: 50%;
+}
+
+#photoCandice{
+    transform: rotate(-15deg) 
+}
+#photoYanis{
+    transform: rotate(20deg) 
+}
+#photoParents{
+    transform: rotate(5deg) 
+}
+/* ----------------------------------------------------------- */
+.pageVide3{
+    /* position: relative; */
+    height: 100vh;
+}
+/* ----------------------------------------------------------- */
+
+
+/* Rideaux Fin */
+    .rideauxFin{
+        height: 100vh;    
+    } 
+
+    .blockVideoGauche{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border : none;
+    }
+
+    .acceuilVideoGauche{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+    .blockVideoDroite{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border : none;
+    }
+    .acceuilVideoDroite{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+    .videoFin{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* Découpage vidéo */
+    #acceuilVideoFinGauche{
+        clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    }
+    #acceuilVideoFinDroite{
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    
+    }
+
+/* -----------Apparition texte Fin------------------------------------------------ */
+.texteRideauxFin{
+    visibility: visible;
+    display: none;
+    width: 100%;
+    position: absolute;
+    color: white;
+    margin-top : 70%;
+    z-index: 500;
+    text-align: center;
+    opacity : 0;
+    font-family: 'Qwitcher Grypen';
+    letter-spacing: 1px;
+
+}
+
+#texteRideauxFin1{
+    font-size: 150px;
+}
+#texteRideauxFin2{
+    font-size: 120px;
+}
+#texteRideauxFin3{
+    font-size: 120px;
+}
+#texteRideauxFin4{
+    font-size: 150px;
+}
+
+.vignetApparitionFin1 {    
+    opacity: 1;
+    transition: opacity 3s;
+}
+.vignetDisparitionFin1 {    
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+
+.vignetApparitionFin2 {    
+    opacity: 1;
+    transition: opacity 3s;
+}
+.vignetDisparitionFin2 {    
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.vignetApparitionFin3 {    
+    opacity: 1;
+    transition: opacity 3s;
+}
+.vignetDisparitionFin3 {    
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.vignetApparitionFin4 {    
+    opacity: 1;
+    transition: opacity 3s;
+}
+.vignetDisparitionFin4 {    
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
