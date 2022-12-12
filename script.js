@@ -63,12 +63,13 @@ if (window.innerWidth >= 801) {
     }
 
  // Fonction scroll auto
+    //  var scroll = document.getElementById('demo');
+    //  scroll.addEventListener("click", function(){
+    //     console.log("J\'ai clické");
+    // });
  
-    function scrollAuto() {
-        var scroll = document.getElementById('demo');
 
 
-    }
 
 
 // Détection écran
@@ -145,6 +146,7 @@ if (window.innerWidth >= 801) {
     
 
 // Apparition texte de fin
+var onlyOneFin = 0;
 window.addEventListener('scroll', function(){
         if ( (HauteurDom - hauteurFenetre) == Math.trunc(window.scrollY) || (HauteurDom - hauteurFenetre) == Math.trunc(window.scrollY) - 1 || (HauteurDom - hauteurFenetre) == Math.trunc(window.scrollY) + 1 ) {  
 
@@ -159,8 +161,11 @@ window.addEventListener('scroll', function(){
                     
             // Apparation du texte 1 Fin
             setTimeout(() => {
-                // document.getElementsByTagName('body')[0].style.overflowY = "hidden";
+                if(onlyOneFin == 0) {
+                    document.getElementsByTagName('body')[0].style.overflowY = "hidden";
+                }
                 texte1Fin.classList.add("vignetApparitionFin1"); 
+                onlyOneFin = 1;
             },1);
             setTimeout(() => {                    
                 texte1Fin.classList.add("vignetDisparitionFin1"); 
