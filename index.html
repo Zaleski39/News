@@ -2,7 +2,7 @@
 <html id="HTML">
 
 	<head>
-		<title>Grande nouvelle</title>
+		<title>News</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="Ma première animation de Background" />
 		<meta name="author" content="Alexis RIGOULOT" />
@@ -30,13 +30,15 @@
 		<link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
 		<!-- Script pour animation des textes -->
 		<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-		<!-- Lien fichier JavaScript -->
-			<script async src="script.js"></script>
-
-			
 
 		<!-- Lien fichier Css -->
-			<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style.css">
+		<!-- JQuery -->
+		<script src="https://code.jquery.com/jquery-3.6.1.js"  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+
+
+  
 	</head>
 
 	<body>
@@ -61,7 +63,8 @@
 	<!-- Bouton Scrool -->
 	<div id="demo" class="demo">
 		<section id="Scroll" >
-			<a href="#"><span></span></a>
+			<!-- <a href="#" onclick="scrollPage()"><span></span></a> -->
+			<a href="#" onclick="scrollPage()" ><span></span></a>
 		</section>
 	</div>
 	
@@ -109,7 +112,7 @@
 	<div class="pageVide3"></div>
 
 	<!-- Page programme -->
-	<div class="programme">	
+	<div class="programme" id="programme">	
 		<div class="programme_block">
 			<div class="programme_block_ardoise">
 				<div class="programme_block_ardoise_photo">	
@@ -162,7 +165,7 @@
 
 
 		<!-- Gallery Photo -->
-		<ul class="gallery">
+		<ul class="gallery" id="gallery">
 			<li><img src="assets/img/Candice1.jpg" alt=""></li>
 			<li><img src="assets/img/enfants1.jpg" alt=""></li>
 			<li><img src="assets/img/Yanis1.jpg" alt=""></li>
@@ -187,7 +190,7 @@
 
 
 	<!-- Page vide -->
-	<div class="pageVide4"> 
+	<div class="pageVide4" id="finGallery"> 
 		<h1 id="texteRideauxFin1" class="texteRideauxFin"> C'est déjà la Fin...</h1> 
 		<h1 id="texteRideauxFin2" class="texteRideauxFin"> Pour voir le prochain épisode, <br>rendez-vous le 10 Juin 2023 </h1>
 		<h1 id="texteRideauxFin3" class="texteRideauxFin"> Merci de nous confirmer votre présence <br>avant le 31 Mars 2023 </h1>
@@ -215,5 +218,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js"></script>
 
+			<!-- Lien fichier JavaScript -->
+			<script src="script.js"></script>
 
 </html>

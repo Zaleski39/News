@@ -548,8 +548,18 @@ body{
 }
 
 .photos{
+    opacity: 0;
+    
+}
+
+.modif-opacityTemps { 
+    transition: opacity 10s;
+
+}
+.modif-opacity { 
     opacity: 0.7;
 }
+
 
 .photoEnfants{
     width: 80%;
