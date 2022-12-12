@@ -1,7 +1,3 @@
-if (this.name!='fullscreen'){
-    window.open(location.href,'fullscreen','fullscreen,scrollbars')
-    }
-
 var largeurFenetre = window.innerWidth;
 
 if (window.innerWidth < 801) {
