@@ -8,6 +8,7 @@ if (window.innerWidth < 801) {
 }
 
 if (window.innerWidth >= 801) {
+    
 // Division Riedeaux début
     let acceuilVideoDebut = document.getElementById('acceuilVideo1');
     let acceuilVideoFin = document.getElementById('acceuilVideo2');
