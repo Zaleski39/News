@@ -8,7 +8,7 @@ if (window.innerWidth < 801) {
 }
 
 if (window.innerWidth >= 801) {
-    
+
 // Division Riedeaux début
     let acceuilVideoDebut = document.getElementById('acceuilVideo1');
     let acceuilVideoFin = document.getElementById('acceuilVideo2');
@@ -145,7 +145,7 @@ if (window.innerWidth >= 801) {
             }, 5000);
         }
 
-         // Scroll Gallery Fin
+        //  Scroll Gallery Fin
         setTimeout(defilementFinGallery, 65000);
         function defilementFinGallery(){
             $('html, body').animate({
@@ -219,15 +219,15 @@ window.addEventListener('scroll', function(){
             },12000);
             setTimeout(() => {        
                 texte3Fin.classList.add("vignetDisparitionFin3"); 
-            },15000);
+            },18000);
 
             // Apparation du texte 4 Fin
             setTimeout(() => {                 
                 texte4Fin.classList.add("vignetApparitionFin4"); 
-            },18000);
+            },21000);
             setTimeout(() => {            
                 texte4Fin.classList.add("vignetDisparitionFin4"); 
-            },21000);
+            },24000);
 
             setTimeout(() => {
                 texte1Fin.classList.remove("vignetApparitionFin1"); 
@@ -239,7 +239,7 @@ window.addEventListener('scroll', function(){
                 texte4Fin.classList.remove("vignetApparitionFin4");
                 texte4Fin.classList.remove("vignetDisparitionFin4");
                 document.getElementsByTagName('body')[0].style.overflowY = "scroll";
-            },23000);                
+            },26000);                
     } 
 })
 
