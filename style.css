@@ -303,7 +303,7 @@ body{
 
 .annonce_titre{
     font-size: 80px;
-    height: 50%;
+    height: 55%;
     /* margin-top: 2%; */
 }
     @media screen and (max-width: 1366px) {
@@ -551,7 +551,7 @@ body{
 }
 
 .photos{
-    opacity: 0.8;
+    opacity: 0;
     
 }
 

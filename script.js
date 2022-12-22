@@ -78,12 +78,6 @@ scroll.addEventListener("click", function(){
          }
 });
 
-//  function essaiFunctionScroll() {
-//      console.log("J\'ai clické");
-//     document.getElementById('annonce').scrollTop = 1000;
-//  }
-
-
 // Détection écran
 var isInViewport = function (elem) {
     var distance = elem.getBoundingClientRect();
@@ -96,48 +90,67 @@ var isInViewport = function (elem) {
     };
 
     var findMe = document.querySelector('#annonce');
+    var findMe2 = document.querySelector('#programme');
     var one = 0; 
+    var oneOne = 0; 
 
-    window.addEventListener('scroll', function (event) {        
-    if (one == 0 ) { 
-        if (isInViewport(findMe)) {	
-            one = 1;
-            const txtAnim2 = document.getElementById('annonce_texte1');
-            new Typewriter(txtAnim2, {
-                loop: false,
-                cursor: '',            
-            })
-            .pauseFor (0)
-            .changeDelay (100)
-            .typeString('vous invite à leur mariage le')
-            .start ()
+    var elementPhotos = document.getElementsByClassName('photos');
 
-            const txtAnim3 = document.getElementById('annonce_texte2');
-            new Typewriter(txtAnim3, {
-                loop: false,
-                cursor: '',            
-            })
-            .pauseFor (4000)
-            .changeDelay (100)
-            .typeString('10 Juin 2023')
-            .start ()
-
-            const txtAnim4 = document.getElementById('annonce_texte3');
-            new Typewriter(txtAnim4, {
-                loop: false,
-                cursor: '',            
-            })
-            .pauseFor (6000)
-            .changeDelay (30)
-            .typeString('à 16 heures à la mairie de Varambon <br> ')
-            .pauseFor (2000)
-            .typeString ('à 17 heures cérémonie laïque à la salle de Druillat <br>')
-            .pauseFor (2000)
-            .typeString ('à l\'issue de cette cérémonie, nous aurons le plaisir de vous retrouver pour l\'apéro.... ')
-            .start ()
+    window.addEventListener('scroll', function () {   
+        if (oneOne == 0 ) { 
+            if (isInViewport(findMe2)) {	
+                oneOne = 1;
+                console.log("J'ai détecté programme");
+                console.log(elementPhotos);
+                for (let i = 0 ; i <= elementPhotos.length -1 ; i++) {    
+                    elementPhotos[i].classList.add("modif-opacityTemps");
+                    elementPhotos[i].classList.add("modif-opacity");
+                };
+            } 
         } 
-    }
+
+        if (one == 0 ) { 
+
+            if (isInViewport(findMe)) {	
+                one = 1;
+                const txtAnim2 = document.getElementById('annonce_texte1');
+                new Typewriter(txtAnim2, {
+                    loop: false,
+                    cursor: '',            
+                })
+                .pauseFor (0)
+                .changeDelay (100)
+                .typeString('vous invite à leur mariage le')
+                .start ()
+
+                const txtAnim3 = document.getElementById('annonce_texte2');
+                new Typewriter(txtAnim3, {
+                    loop: false,
+                    cursor: '',            
+                })
+                .pauseFor (4000)
+                .changeDelay (100)
+                .typeString('10 Juin 2023')
+                .start ()
+
+                const txtAnim4 = document.getElementById('annonce_texte3');
+                new Typewriter(txtAnim4, {
+                    loop: false,
+                    cursor: '',            
+                })
+                .pauseFor (6000)
+                .changeDelay (30)
+                .typeString('à 16 heures à la mairie de Varambon <br> ')
+                .pauseFor (2000)
+                .typeString ('à 17 heures cérémonie laïque à la salle de Druillat <br>')
+                .pauseFor (2000)
+                .typeString ('à l\'issue de cette cérémonie, nous aurons le plaisir de vous retrouver pour l\'apéro.... ')
+                .start ()
+            } 
+        }
     }, false);
+
+
 
         
 
