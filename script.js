@@ -189,7 +189,7 @@ window.addEventListener('scroll', function(){
             // Apparation du texte 1 Fin
             setTimeout(() => {
                 if(onlyOneFin == 0) {
-                    // document.getElementsByTagName('body')[0].style.overflowY = "hidden";
+                    document.getElementsByTagName('body')[0].style.overflowY = "hidden";
                 }
                 texte1Fin.classList.add("vignetApparitionFin1"); 
                 onlyOneFin = 1;
