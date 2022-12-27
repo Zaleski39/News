@@ -1,5 +1,3 @@
-
-
 var largeurFenetre = window.innerWidth;
 
 if (window.innerWidth < 801) {
@@ -35,7 +33,7 @@ if (window.innerWidth >= 801) {
         }
     })
     
-    var compteurRideauxDebut = 0;
+var compteurRideauxDebut = 0;
 // Apparation du texte d'accueil
 setTimeout(apparitionTexte, 2000);
 function apparitionTexte(){        
@@ -58,7 +56,7 @@ function dispartionTexte1(){
         d.classList.add("vignetsDisparition"); 
 }
 // Apparation scrollbar => 15000
-    setTimeout(scrollActive, 1);
+    setTimeout(scrollActive, 15000);
     function scrollActive(){  
             var a = document.getElementById('demo');
             a.className += ' show';       
@@ -79,14 +77,14 @@ scroll.addEventListener("click", function(){
 });
 
 // Détection écran
-var isInViewport = function (elem) {
-    var distance = elem.getBoundingClientRect();
-    return (
-        distance.top >= 0 &&
-        distance.left >= 0 &&
-        distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        distance.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+    var isInViewport = function (elem) {
+        var distance = elem.getBoundingClientRect();
+        return (
+            distance.top >= 0 &&
+            distance.left >= 0 &&
+            distance.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            distance.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
     };
 
     var findMe = document.querySelector('#annonce');
@@ -148,12 +146,7 @@ var isInViewport = function (elem) {
                 .start ()
             } 
         }
-    }, false);
-
-
-
-        
-
+    }, false);  
 
 // Rideaux Fin
 
@@ -167,73 +160,70 @@ var isInViewport = function (elem) {
     window.addEventListener('scroll', function(){
         acceuilVideo1.style.left = (hauteurFenetre - HauteurDom) + window.pageYOffset + 'px';
         acceuilVideo2.style.left = -(hauteurFenetre - HauteurDom) -window.pageYOffset+'px';
-    })
-
-
-    
+    })    
 
 // Apparition texte de fin
-var onlyOneFin = 0;
-window.addEventListener('scroll', function(){
-        if ( (HauteurDom - hauteurFenetre) == Math.trunc(window.scrollY) || (HauteurDom - hauteurFenetre) == Math.trunc(window.scrollY) - 1 || (HauteurDom - hauteurFenetre) == Math.trunc(window.scrollY) + 1 ) {  
+    var onlyOneFin = 0;
+    window.addEventListener('scroll', function(){
+            if ( (HauteurDom - hauteurFenetre) == Math.trunc(window.scrollY) || (HauteurDom - hauteurFenetre) == Math.trunc(window.scrollY) - 1 || (HauteurDom - hauteurFenetre) == Math.trunc(window.scrollY) + 1 ) {  
 
-        var texte1Fin = document.getElementById("texteRideauxFin1");
-        var texte2Fin = document.getElementById("texteRideauxFin2");
-        var texte3Fin = document.getElementById("texteRideauxFin3");
-        var texte4Fin = document.getElementById("texteRideauxFin4");
-        texte1Fin.style.display = "block";                
-        texte2Fin.style.display = "block";                
-        texte3Fin.style.display = "block";               
-        texte4Fin.style.display = "block"; 
-                    
-            // Apparation du texte 1 Fin
-            setTimeout(() => {
-                if(onlyOneFin == 0) {
-                    document.getElementsByTagName('body')[0].style.overflowY = "hidden";
-                }
-                texte1Fin.classList.add("vignetApparitionFin1"); 
-                onlyOneFin = 1;
-            },1);
-            setTimeout(() => {                    
-                texte1Fin.classList.add("vignetDisparitionFin1"); 
-            },3000);
+            var texte1Fin = document.getElementById("texteRideauxFin1");
+            var texte2Fin = document.getElementById("texteRideauxFin2");
+            var texte3Fin = document.getElementById("texteRideauxFin3");
+            var texte4Fin = document.getElementById("texteRideauxFin4");
+            texte1Fin.style.display = "block";                
+            texte2Fin.style.display = "block";                
+            texte3Fin.style.display = "block";               
+            texte4Fin.style.display = "block"; 
+                        
+                // Apparation du texte 1 Fin
+                setTimeout(() => {
+                    if(onlyOneFin == 0) {
+                        document.getElementsByTagName('body')[0].style.overflowY = "hidden";
+                    }
+                    texte1Fin.classList.add("vignetApparitionFin1"); 
+                    onlyOneFin = 1;
+                },1);
+                setTimeout(() => {                    
+                    texte1Fin.classList.add("vignetDisparitionFin1"); 
+                },3000);
 
-            // Apparation du texte 2 Fin
-            setTimeout(() => {              
-                texte2Fin.classList.add("vignetApparitionFin2"); 
-            },6000);
-            setTimeout(() => {                
-                texte2Fin.classList.add("vignetDisparitionFin2"); 
-            },9000);
+                // Apparation du texte 2 Fin
+                setTimeout(() => {              
+                    texte2Fin.classList.add("vignetApparitionFin2"); 
+                },6000);
+                setTimeout(() => {                
+                    texte2Fin.classList.add("vignetDisparitionFin2"); 
+                },9000);
 
-            // Apparation du texte 3 Fin
-            setTimeout(() => {          
-                texte3Fin.classList.add("vignetApparitionFin3"); 
-            },12000);
-            setTimeout(() => {        
-                texte3Fin.classList.add("vignetDisparitionFin3"); 
-            },18000);
+                // Apparation du texte 3 Fin
+                setTimeout(() => {          
+                    texte3Fin.classList.add("vignetApparitionFin3"); 
+                },12000);
+                setTimeout(() => {        
+                    texte3Fin.classList.add("vignetDisparitionFin3"); 
+                },18000);
 
-            // Apparation du texte 4 Fin
-            setTimeout(() => {                 
-                texte4Fin.classList.add("vignetApparitionFin4"); 
-            },21000);
-            setTimeout(() => {            
-                texte4Fin.classList.add("vignetDisparitionFin4"); 
-            },24000);
+                // Apparation du texte 4 Fin
+                setTimeout(() => {                 
+                    texte4Fin.classList.add("vignetApparitionFin4"); 
+                },21000);
+                setTimeout(() => {            
+                    texte4Fin.classList.add("vignetDisparitionFin4"); 
+                },24000);
 
-            setTimeout(() => {
-                texte1Fin.classList.remove("vignetApparitionFin1"); 
-                texte1Fin.classList.remove("vignetDisparitionFin1");
-                texte2Fin.classList.remove("vignetApparitionFin2");
-                texte2Fin.classList.remove("vignetDisparitionFin2");
-                texte3Fin.classList.remove("vignetApparitionFin3");
-                texte3Fin.classList.remove("vignetDisparitionFin3");
-                texte4Fin.classList.remove("vignetApparitionFin4");
-                texte4Fin.classList.remove("vignetDisparitionFin4");
-                document.getElementsByTagName('body')[0].style.overflowY = "scroll";
-            },26000);                
-    } 
-})
+                setTimeout(() => {
+                    texte1Fin.classList.remove("vignetApparitionFin1"); 
+                    texte1Fin.classList.remove("vignetDisparitionFin1");
+                    texte2Fin.classList.remove("vignetApparitionFin2");
+                    texte2Fin.classList.remove("vignetDisparitionFin2");
+                    texte3Fin.classList.remove("vignetApparitionFin3");
+                    texte3Fin.classList.remove("vignetDisparitionFin3");
+                    texte4Fin.classList.remove("vignetApparitionFin4");
+                    texte4Fin.classList.remove("vignetDisparitionFin4");
+                    document.getElementsByTagName('body')[0].style.overflowY = "scroll";
+                },26000);                
+        } 
+    })
 
 }
