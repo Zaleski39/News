@@ -56,7 +56,7 @@ function dispartionTexte1(){
         d.classList.add("vignetsDisparition"); 
 }
 // Apparation scrollbar => 15000
-    setTimeout(scrollActive, 15000);
+    setTimeout(scrollActive, 1);
     function scrollActive(){  
             var a = document.getElementById('demo');
             a.className += ' show';       
