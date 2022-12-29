@@ -98,8 +98,6 @@ scroll.addEventListener("click", function(){
         if (oneOne == 0 ) { 
             if (isInViewport(findMe2)) {	
                 oneOne = 1;
-                console.log("J'ai détecté programme");
-                console.log(elementPhotos);
                 for (let i = 0 ; i <= elementPhotos.length -1 ; i++) {    
                     elementPhotos[i].classList.add("modif-opacityTemps");
                     elementPhotos[i].classList.add("modif-opacity");
